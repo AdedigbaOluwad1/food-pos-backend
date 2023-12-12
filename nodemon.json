@@ -1,7 +1,8 @@
 {
-    "watch": ["server"],
-    "ext": "ts",
-    "ignore": ["server/**/*.spec.ts"],
-    "exec": "ts-node ./server/index.ts"
+  "watch": ["server/**/*.ts"],
+  "ext": "ts",
+  "execMap": {
+    "ts": "ts-node"
   }
+}
   

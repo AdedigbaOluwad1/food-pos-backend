@@ -37,8 +37,9 @@ const productsController = {
             res.send(500).json({ message: err.message });
         }
     },
-    createProduct: async(req: Request, res: Response) => {
+    createProduct: async(req: any, res: Response) => {
         try {
+            // console.log(req.user)
             const product = await Product.create(req.body)
             res.status(200).json(product)
         } catch (error: any) {

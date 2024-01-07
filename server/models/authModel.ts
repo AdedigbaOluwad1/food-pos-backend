@@ -24,6 +24,24 @@ const userSchema = new mongoose.Schema(
     }
 )
 
+const refreshTokensSchema = new mongoose.Schema(
+    {
+        authorizationToken: {
+            type: String,
+            required: true
+        },
+        refreshToken: {
+            type: String,
+            required: true
+        }
+    },
+)
+
 const User = mongoose.model('User', userSchema)
 
-export default User
+const RefreshTokens = mongoose.model('RefreshTokens', refreshTokensSchema)
+
+export {
+    User,
+    RefreshTokens
+}

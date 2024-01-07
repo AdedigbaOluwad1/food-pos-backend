@@ -1,0 +1,14 @@
+openapi: 3.0.0
+info:
+  title: My API
+  version: 1.0.0
+paths:
+  /hello:
+    get:
+      summary: Retrieve a greeting
+      responses:
+        '200':
+          description: A successful response
+          content:
+            application/json:
+              example: { greeting: "Hello, World!" }
